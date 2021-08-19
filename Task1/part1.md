@@ -318,7 +318,7 @@ root          38  0.0  0.0      0     0 ?        S    15:23   0:00 [ksoftirqd/5]
 ---
 <div id="5"></div>
 
-## 5.List files and folders.
+## 5. List files and folders.
 Command: **ls**: list all file and folder in current directory.
 
 ```bash
@@ -745,6 +745,12 @@ The most widely used options are:
 Example:
 
 ![ssh](./img/ssh.jpeg)
+
+---
+
+<div id="14"></div>
+
+## 14. Gen ssh-key
 
 ---
 
@@ -1183,7 +1189,41 @@ First, we’re dumping all the stdout to /dev/null. Then, in the second part, we
 
 <div id="20"></div>
 
-## 20. Redirecting Standard Input, Redirecting Standard Output, Redirecting Standard Error. 
+## 20. Redirecting Standard Output, Redirecting Standard Error. 
+
+### 1. Redirecting Standard Output
+
+Using the > operator to redirect the input for a command , example is shown below :
+
+![normal_stdout](./img/redirect_stdout.jpeg)
+
+Or using file descriptor:
+
+![descriptor_stdout](./img/redirect_stdout_1.jpeg)
+
+
+### 2. Redirecting Standard Error
+
+> Standard error by defaults goes to the same place as the standard output – the shell window or terminal. There are good reasons why stdout and stderr are treated separately.
+
+> The main reason is that we can redirect the output of a command or commands to a file but you have no way of knowing whether an error occurred. Separating stderr from stdout allows the error message to appear on your screen while output still goes to a file.
+
+Example:
+
+![redirect error](./img/redirect_stderr.jpeg)
+
+### 3. Redirecting Standard Error
+
+> Use 2>&1 Syntax to redirect standard error to the same location as standard output.
+
+Example:
+
+![redirect both](./img/redirect_both.jpeg)
+
+How does this command works?
+
+- \> error.txt redirects the output of the ls command
+- 2>&1 sends the output of the file descriptor 2, stderr , to the same location as the file descriptor 1, stdout.
 
 
  
