@@ -765,6 +765,14 @@ SSH supports several public key algorithms for authentication keys. These includ
 - ecdsa: a new Digital Signature Algorithm standarized by the US government, using elliptic curves.
 - ed25519: This is a new algorithm added in OpenSSH. Support for it in clients is not yet universal.
 
+How to setup SSH keys:
+
+1. Generate SSH Keys
+2. Enter a passphrase (optional)
+3. Move the public key to the remote machine (/home/\<username>/.ssh)
+4. Connection
+
+
 ---
 
 <div id="15"></div>
