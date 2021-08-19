@@ -752,6 +752,19 @@ Example:
 
 ## 14. Gen ssh-key
 
+> Ssh-keygen is a tool for creating new authentication key pairs for SSH. Such key pairs are used for automating logins, single sign-on, and for authenticating hosts.  
+
+Command:
+```bash
+ssh-keygen -t <algorithm> -b <size>
+```
+SSH supports several public key algorithms for authentication keys. These include:
+
+- rsa: an old algorithm based on the difficulty of factoring large numbers.
+- dsa: an old US government Digital Signature Algorithm. 
+- ecdsa: a new Digital Signature Algorithm standarized by the US government, using elliptic curves.
+- ed25519: This is a new algorithm added in OpenSSH. Support for it in clients is not yet universal.
+
 ---
 
 <div id="15"></div>
