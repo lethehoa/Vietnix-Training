@@ -678,6 +678,74 @@ Detect the version of services running
 ### 2. telnet
 > Telnet is an **application protocol** used on the Internet or local area network to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection.
 
+Command:
+```bash
+telnet <address> <port>
+```
+
+### 3. ping
+> ping uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.
+
+Command:
+```bash
+ping <option> <host>
+```
+
+Some common options:
+
+- -4: Use IPv4 only.
+- -6: Use IPv6 only.
+- -a: Audible ping.
+- -b: Allow pinging a broadcast address.
+- -B: Do not allow ping to change source address of probes. The address is bound to one selected when ping starts.
+- -c: Stop after sending count ECHO_REQUEST packets.
+
+Example:
+
+![ping default](./img/ping_default.jpeg)
+
+![ping count](./img/ping_count.jpeg)
+
+### 4. ssh
+
+> is a program for logging into a remote machine and for exe‐ cuting commands on a remote machine.
+
+Command:
+```bash
+ssh <option> <host>
+```
+
+Some common options:
+
+- -4: Forces ssh to use IPv4 addresses only.
+- -6: Forces ssh to use IPv4 addresses only.
+- -A: Enables forwarding of connections from an authentication agent such as ssh-agent(1).  This can also be specified on a per-host basis in a configuration file.
+- -a: Disable forwarding of he authentication agent connection.
+- -B: Bind to the address of bind_interface before attempting to connect to the destination host. This is only useful on systems with more than one address.
+
+Example:
+
+![ssh](./img/ssh.jpeg)
+
+### 5. coyp file/folder from local to public host.
+
+> scp (secure copy) is a command-line utility that allows you to securely copy files and directories between two locations.
+
+Command:
+```bash
+scp <option> [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2
+```
+The most widely used options are:
+- -P: Specifies the remote host ssh port.
+- -p: Preserves files modification and access times.
+- -q: Use this option if you want to suppress the progress meter and non-error messages.
+- -c: This option forces scp to compresses the data as it is sent to the destination machine.
+- -r: This option tells scp to copy directories recursively.
+
+Example:
+
+![ssh](./img/ssh.jpeg)
+
 ---
 
 <div id="15"></div>
@@ -691,7 +759,7 @@ cat <filename>
 ![Catfile](./img/cat_filecontent.jpeg)
 
 ---
-<div id="15"></div>
+<div id="16"></div>
 
 ## 16. Append string at the end of a file.
 
@@ -1009,7 +1077,7 @@ Some basic options:
 - -p: Set the destination port to use. Default is 33434.
 
 Example:
-![traceroute](./img/traceroute)
+![traceroute](./img/traceroute.jpeg)
 
 > **kill** is a built-in command which is used to terminate processes manually
 
@@ -1050,3 +1118,72 @@ Some basic options:
 
 Example:
 ![pkill](./img/pkill.jpeg)
+
+---
+
+<div id="18"></div>
+
+## 18.  Standard Input, Output, Error.
+
+> Every process in Linux is provided with three open files( usually called file descriptor). These files are the standard input, output and error files.
+
+### 1. Standard Input (stdin):
+> Standard Input is the keyboard, abstracted as a file to make it easier to write shell scripts.
+
+> File descriptor: 0
+
+### 2. Standard Output (stdout):
+ 
+> Standard Output is the shell window or the terminal from which the script runs, abstracted as a file to again make writing scripts & program easier
+
+> File descriptor: 1
+
+### 3. Standard Error (stderr):
+
+> Standard error is the same as standard output:the shell window or terminal from which the script runs.
+
+> File descriptor: 2
+
+---
+
+<div id="19"></div>
+
+## 19. /dev/null
+
+> It’s a special file that’s present in every single Linux system. However, unlike most other virtual files, instead of reading, it’s used to write. Whatever you write to /dev/null will be discarded, forgotten into the void.
+
+> Using /dev/null
+
+In the following command, grep will try to search for a string in the “/sys" directory.
+```bash
+grep -r yourname /sys/
+```
+![normal grep](./img/normal_grep.jpeg)
+
+However, it will generate a lot of errors.
+
+To make output looks much better, we will push those errors that appear in the screen to /dev/null.
+```bash
+grep -r yourname /sys/ 2>/dev/null
+```
+![grep_to_devnull](./img/grep_to_devnull.jpeg)
+
+The output looks much better.
+
+In certain situations, the output may not be useful at all. Using redirection, we can dump all the output into the /dev/null.
+```bash
+grep -r yourname /sys/ > /dev/null 2>&1
+```
+![full disappear](./img/notthing_appear.jpeg)
+
+How's this command works:
+First, we’re dumping all the stdout to /dev/null. Then, in the second part, we’re telling bash to send stderr to stdout. In this example, there’s nothing to output.
+
+---
+
+<div id="20"></div>
+
+## 20. Redirecting Standard Input, Redirecting Standard Output, Redirecting Standard Error. 
+
+
+ 
