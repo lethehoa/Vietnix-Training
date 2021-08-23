@@ -1,8 +1,8 @@
 # Task 2
 ## Content
 
-1. <a href="#a">LAMP stack :  build wordpress webiste</a>
-2. <a href="#a">LEMP stack : build wordpress webiste</a>
+1. <a href="#1">LAMP stack :  build wordpress webiste</a>
+2. <a href="#2">LEMP stack : build wordpress webiste</a>
 ---
 <div id="1"></div>
 
