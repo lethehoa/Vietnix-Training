@@ -3,9 +3,9 @@
 ---
 1. <a href="#1">Reverse proxy (nginx)</a>
 2. <a href="#2">Remote mysql</a>
-3. <a href="#2">vsftpd</a>
-4. <a href="#2">phpmyadmin</a>
-5. <a href="#2">Build wordpress webiste, allow remote mysql and vsftpd</a>
+3. <a href="#3">vsftpd</a>
+4. <a href="#4">phpmyadmin</a>
+5. <a href="#5">Build wordpress webiste, allow remote mysql and vsftpd</a>
 ---
 <div id="1"></div>
 

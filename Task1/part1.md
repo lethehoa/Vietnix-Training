@@ -1,4 +1,4 @@
-# Part 1: Basic command
+# Task 1 - Part 1: Basic command
 ## Content
 ---
 1. <a href='#1'>View disk space.</a>
@@ -499,10 +499,12 @@ ln -s <path to the file/folder to be linked> <the path of the link to be created
 ```
 ![Symboliclink](./img/6.jpeg)
 
-There are many ways to remove a symlink:
+View link
 ```bash
 ls -l <path-to-assumed-symlink>
 ```
+
+There are many ways to remove a symlink:
 ```bash
 unlink <path-to-symlink>
 ```
