@@ -6,6 +6,8 @@
 3. <a href="#3">vsftpd</a>
 4. <a href="#4">phpmyadmin</a>
 5. <a href="#5">Build wordpress webiste, allow remote mysql and vsftpd</a>
+6. <a href="#6">Virtual Host Apaches</a>
+
 ---
 <div id="1"></div>
 
@@ -142,5 +144,22 @@ You'll be ask to login, use user that you created in mariadb.
 
 > Make sure to keep **nginx** running as a reverse proxy like the first section of this part.
 
+---
 
+## 6. Virtual Host Apache
+
+> Virtual hosting is a method for **hosting multiple domain names on a single server**. This allows one server to share its resources, such as memory and processor cycles, without requiring all services provided to use the same host name.
+
+- In **/etc/apache2/sites-availble** copy file config. I create two virtual hosts here, so I copied two files.
+![copy config file](./img/copy-file.png) 
+
+- Change content of each file, change your **server name, server alias and document root (point to your web folder).
+![change content file](./img/change-configfile.png)
+![change content file](./img/change-confilefile1.png)
+
+- Enable new config file and disable old config file (this step means **link new files** and **unlink old file** to those files in **etc/apache2/sites-enable**, you can use symbolic command, I use another command here but the purpose is the same).
+![link new file, unlink old file](./img/enable-config-file.png)
+
+- Result (If you run server on Virtual Machine and access through local machine, you have to point those domains to server's IP on file **hosts**).
+![result](./img/final-result.png)
 

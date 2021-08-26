@@ -172,7 +172,7 @@ Options:
 - -p: Set the destination port to use. Default is 33434.
 - -q: Set the number of probes per each hop. Default is 3.
 
-
+![traceroute 1.1.1.1](./img/traceroute.jpeg)
 ---
 
 <div id="3"></div>
@@ -187,6 +187,8 @@ Options:
 ```bash
 sudo tcpdump -D
 ```
+
+![tcpdump list interface](./img/tcpdump-list-interface.png)
 
 - Capture all packets in any interface
 ```bash
@@ -217,6 +219,8 @@ sudo tcpdump -i any -c5 -nn host <IP address>
 ```bash
 sudo tcpdump -i any -c5 -nn port <port number>
 ```
+
+![tcpdump count](./img/tcpdump-scan.png)
 
 - Filtering packets based on the source or destination IP Address or hostname.
 ```bash
