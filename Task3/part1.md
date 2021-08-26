@@ -145,6 +145,7 @@ You'll be ask to login, use user that you created in mariadb.
 > Make sure to keep **nginx** running as a reverse proxy like the first section of this part.
 
 ---
+<div id="6"></div>
 
 ## 6. Virtual Host Apache
 
